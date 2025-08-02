@@ -3,7 +3,7 @@
 This is a simple USSD app built with Flask for farmers to check real-time market prices.
 
 ## How It Works
-- User dials your USSD code (e.g. `*384*123#`)
+- User dials your USSD code (e.g. `*347*179#`)
 - Backend (this app) returns product options
 - User selects a crop
 - Price is displayed and session ends
@@ -17,3 +17,4 @@ This is a simple USSD app built with Flask for farmers to check real-time market
 6. Paste that into your Africa’s Talking USSD callback field
 
 🎉 You're live!
+
