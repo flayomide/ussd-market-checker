@@ -30,6 +30,8 @@ def ussd():
     # 3. GLOBAL BACK TO LANGUAGE SELECTION (00)
     # =======================
     elif text.endswith("*00") or text == "00":
+        # Reset path to language selection
+        text = ""
         response = (
             "CON Welcome to Market Checker (wholesale)\n"
             "Zabi yaren ku / Choose your language:\n"
@@ -91,9 +93,11 @@ def ussd():
         response = "CON Wake: ₦35,000 zuwa ₦43,000 kowanne buhu 50kg (₦700 - ₦860/kg)\n0. Komawa Menu\n00. Komawa Zaben Harshe\n99. Fita"
 
     # =======================
-    # 8. BACK TO ENGLISH MAIN MENU (from any product)
+    # 8. BACK TO ENGLISH MAIN MENU (reset path)
     # =======================
     elif text.endswith("*0") and text.startswith("1*"):
+        # Reset path to English main menu
+        text = "1"
         response = (
             "CON What would you like to check?\n"
             "1. Maize\n"
@@ -105,9 +109,11 @@ def ussd():
         )
 
     # =======================
-    # 9. BACK TO HAUSA MAIN MENU (from any product)
+    # 9. BACK TO HAUSA MAIN MENU (reset path)
     # =======================
     elif text.endswith("*0") and text.startswith("2*"):
+        # Reset path to Hausa main menu
+        text = "2"
         response = (
             "CON Me kuke so ku duba?\n"
             "1. Masara\n"
@@ -122,6 +128,8 @@ def ussd():
     # 10. BACK TO LANGUAGE SELECTION FROM MAIN MENU
     # =======================
     elif text == "1*0" or text == "2*0":
+        # Reset path to language selection
+        text = ""
         response = (
             "CON Welcome to Market Checker (wholesale)\n"
             "Zabi yaren ku / Choose your language:\n"
